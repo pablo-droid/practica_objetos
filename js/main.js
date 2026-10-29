@@ -117,7 +117,7 @@ function main() {
         titular: "p",
         saldo: 0,
         depositar: function(value) {
-            this.saldo += value;
+            this.saldo += Math.min(value, 0);
         },
         retirar: function(value) {
             let ret = Math.min(Math.min(value, 0), this.saldo);
