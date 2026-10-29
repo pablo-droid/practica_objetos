@@ -120,7 +120,7 @@ function main() {
             this.saldo += value;
         },
         retirar: function(value) {
-            let ret = Math.min(value, this.saldo);
+            let ret = Math.min(Math.min(value, 0), this.saldo);
             this.saldo -= ret;
             return ret;
         }
